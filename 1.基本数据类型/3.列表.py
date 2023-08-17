@@ -17,3 +17,14 @@ list[0]="123"
 #重新输出list，以及其对应的地址
 print("打印修改后list",list,"list的地址为:",id(list),"list第一个元素的地址为",id(list[0])) #输出list
 
+list=[400,300,10.24,"hello"]
+print("将list全部重新赋值以后:",list,"list的地址为:",id(list),"list第一个元素的地址为",id(list[0])) #输出list
+
+
+
+#可以使用insert方法，在列表的指定位置来插入数据
+#当insert方法传入的位置超出列表的下标范围时，会自动填充到列表的最前端或者末尾
+listTest=[1,2,3,"hello",4,"5"]
+print(listTest)
+listTest.insert(-20,"hhh")
+print(listTest)
