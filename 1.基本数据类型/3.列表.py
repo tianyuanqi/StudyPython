@@ -7,13 +7,14 @@
 a = "我对钱没有兴趣"
 list = [100, 123.4, a, "wo"]
 
+print("****************分割线（List是一种可变数据类型，可变的是里面的元素，本身地址不会变）**********************************")
 # list是一种可变数据类型，如果更改list里面的元素，修改的只是对其地址的引用，而list的地址并不会变化
 # 例如这里，先打印出list的地址，以及第一个元素的地址
-print("打印原始的list", list, "list的地址为:", id(list), "list第一个元素的地址为", id(list[0]))  # 输出list
+print("打印原始的list", list, "list的地址为:", id(list), "list第一个元素的地址为", id(list[0]))
 list[0] = "123"  # 在这里，将第一个元素修改为字符串"123"
-print("打印修改后list", list, "list的地址为:", id(list), "list第一个元素的地址为", id(list[0]))  # 重新输出list，以及其对应的地址
+print("打印修改后list", list, "list的地址为:", id(list), "list第一个元素的地址为", id(list[0]))
 list = [400, 300, 10.24, "hello"]
-print("将list全部重新赋值以后:", list, "list的地址为:", id(list), "list第一个元素的地址为", id(list[0]))  # 输出list
+print("将list全部重新赋值以后:", list, "list的地址为:", id(list), "list第一个元素的地址为", id(list[0]))
 
 # 切片操作，list[start:end],其中start是起始索引，包含在切片中，end是终止索引，不包含在切片中的
 list = [100, 123.4, 20, "wo", "giao", 897]
