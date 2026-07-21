@@ -12,11 +12,6 @@ print("商品总价",total_price)
 print("错误信息",error_message)
 print("错误信息是否为 None:",error_message == None)
 
-
-
-
-
-
 # 练习二：比较判断
 total_cases = 100
 executed_cases = 75

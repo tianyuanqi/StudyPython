@@ -19,9 +19,8 @@ print("响应文本中是否不包含 error", "error" not in response_text)
 print("状态码为 200，并且响应文本包含'token'。", status_code == 200 and "token" in response_text)
 print("响应时间不超过 1000，并且响应文本中不存在 failed", response_time <= 1000 and "failed" not in response_text)
 
-is_success = status_code != 200 or "error" in response_text or response_time > 1000
-print("以下任意一个情况出现时，请求存在异常：状态码不是 200,响应文本包含error,响应时间大于 1000",
-    not is_success  )
+is_fail = status_code != 200 or "error" in response_text or response_time > 1000
+print("以下任意一个情况出现时，请求存在异常：状态码不是 200,响应文本包含error,响应时间大于 1000",is_fail)
 
 environments = input("请输入测试环境：")
 allowed_environments = ["dev", "test", "staging"]
