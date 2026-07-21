@@ -60,7 +60,7 @@ print("**************************8分割线**********************")
 product_name = str(input("请输入商品名称:"))
 priceA = float(input("请输入单价:"))
 quantity = int(input("请输入数量:"))
-salary = float(priceA) * int(quantity)
+salary = priceA * quantity
 
 print("商品:", product_name)
 print("购买数量:", quantity)
@@ -89,7 +89,7 @@ print("通过率:", f"{pass_rate:.2%}")
 '''
 对以下问题的简短解释：
 为什么 input() 的结果通常需要类型转换？
-因为input默认是str类型，需要转换成其他的类型才能精准保存
+因为input默认是str类型，需要转换成其他的类型才能进行计算或比较
 
 int 和 float 在本次练习中分别适合保存什么数据？
 int适合保存商品数量，用例数量这种最小单位是1的数据
