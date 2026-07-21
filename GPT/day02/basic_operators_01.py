@@ -1,11 +1,21 @@
 # 练习一：规范命名
-from operator import and_
 
 product_name = "键盘"  # 商品名称
 product_price = 100  # 商品单价
 product_quantity = 10  # 商品数量
 total_price = product_price * product_quantity  # 总价
 error_message = None  # 错误信息
+
+print("商品名称",product_name)
+print("商品数量",product_quantity)
+print("商品总价",total_price)
+print("错误信息",error_message)
+print("错误信息是否为 None:",error_message == None)
+
+
+
+
+
 
 # 练习二：比较判断
 total_cases = 100
@@ -15,7 +25,7 @@ fail_cases = 5
 print("已执行数量是否等于总数量:", total_cases == executed_cases)
 print("失败数量是否大于:", fail_cases > 0)
 print("通过数量是否不少于70:", executed_cases - fail_cases >= 70)
-print("未执行数量是否小于 30:", (total_cases - executed_cases ) < 30)
+print("未执行数量是否小于 30:", (total_cases - executed_cases) < 30)
 
 progress_percent = executed_cases / total_cases
 print(type(progress_percent))
@@ -27,9 +37,9 @@ status_code = 200
 response_time = 850
 has_token = True
 error_message = None
-is_success = status_code == 200 and has_token==True and error_message is None
+is_success = status_code == 200 and has_token and error_message is None and response_time <= 1000
 
 print("判定状态码为 200，并且响应时间不超过 1000 毫秒：", status_code == 200 and response_time <= 1000)
 print("判定状态码不是 200，或者错误信息不为 None：", status_code != 200 or error_message is not None)
 print("判定有 token，并且不存在错误信息：", has_token and error_message is None)
-print("判定请求是否失败：对“请求成功条件”使用 not 取反:",not is_success)
+print("判定请求是否失败：对“请求成功条件”使用 not 取反:", not is_success)
