@@ -21,7 +21,7 @@ print(lower_result)
 split_result = lower_result.split("_") #根据_切分
 print(split_result)
 print("切分以后中间是否都是数字:", split_result[1].isdigit())
-join_result = "-".join(split_result)
+join_result = " - ".join(split_result)
 print("原字符串:",raw_result)
 print("处理后的字符串:",join_result)
 
@@ -40,3 +40,4 @@ print("是否以401为结尾:",log_text.endswith("401"))
 print("failed第一次出现的位置是:",log_text.find("failed"))
 print("是否包含login:","login" in log_text)
 print("把failed替换为failure:",log_text.replace("failed","failure"))
+print("替换后的原字符串:",log_text)
