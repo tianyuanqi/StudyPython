@@ -18,7 +18,7 @@ total_cases = 20
 # 整行使用一个 f-string。
 
 passed_percent = passed_cases / total_cases
-print(f"CASE_{case_number:03d} | {api_name:<12} | {status_code} | {response_time:.2f} ms | {passed_cases:.2%}")
+print(f"CASE_{case_number:03d} | {api_name:<12} | {status_code} | {response_time:.2f} ms | {passed_percent:.2%}%")
 
 print("——————————————————————————————复习题二：列表增删操作——————————————————————————————")
 
