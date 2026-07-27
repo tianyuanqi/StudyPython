@@ -15,11 +15,13 @@ environment = "test"
 # 接口是否满足以下全部条件：
 
 print(f"状态码为200:{status_code == 200}")
+
+hastoken = has_token
 print(f"是否存在token:{has_token}")
 
 print(f"没有错误信息,", error_message is None)
 
-response_time_pass = response_time < 1000
+response_time_pass = response_time <= 1000
 print(f"响应时间合格:", response_time_pass)
 
 environment_pass = environment in ["test", "staging"]
@@ -55,13 +57,17 @@ print("是否以/api开头:", start_with_path)
 end_with_path = low_raw_path.endswith("login")
 print("是否以login结尾:", end_with_path)
 
+find_user = low_raw_path.find("user")
+print("查找user第一次出现的位置:", find_user)
+
 replace_path = low_raw_path.replace("login", "signin")
 print("替换成sigin以后:", replace_path)
 
 split_path = replace_path.split("/")
 print(type(split_path))
 
-join_path = "->".join(split_path)
+join_path = " -> ".join(split_path)
+print(f"最终地址为:{join_path}")
 print("原始字符串是否改变:", raw_path != "  /API/V1/USER/LOGIN  ")
 
 print("————————————————————练习三：日志内容处理——————————————————————————")
@@ -89,12 +95,16 @@ print("替换以后:", replace_log)
 split_log = replace_log.split("|")
 print("拆分以后:", split_log)
 
+
+print("第一部分是否是纯字母:",split_log[0].isalpha())
+
 print("第三部分是否以401结尾", split_log[2].endswith("401"))
 
-join_log = "-".join(split_log)
+join_log = " - ".join(split_log)
 
 print("原始日志为:", raw_log, " 原始日志长度为:", len(raw_log))
 print("最终日志为:", join_log, " 最终日志长度为:", len(join_log))
+print("最终字符串是否包含failure:","failure" in join_log)
 
 print("————————————————————练习四：字符串格式化——————————————————————————————")
 case_number = 12

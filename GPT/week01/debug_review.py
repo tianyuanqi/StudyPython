@@ -48,8 +48,9 @@ cases = ["login", "register", "logout"]
 # first_case = cases[0:1]
 # print(type(first_case))
 # 原需求是取得字符串 "login"，说明应该怎样修改。
-# first_case = cases.index(1)
-print(type(cases[0]))  # 用索引直接找到第一个元素就好了
+first_case=cases[0]
+print(f"原字符串为{first_case}")
+print(type(first_case))  # 用索引直接找到第一个元素就好了
 
 print("错题8")
 numbers = [30, 10, 20]
@@ -57,4 +58,5 @@ numbers.reverse()
 # print("降序排序结果：", numbers) 这里直接输出了反转结果，没有做降序排列
 # 反转结果：[20, 10, 30]
 # 降序排序结果：[30, 20, 10]
-print("反转降序排序结果为:", sorted(numbers,reverse=True))
+print("反转结果为:",numbers)
+print("降序排序结果为:", sorted(numbers,reverse=True))

@@ -57,9 +57,9 @@ test_cases[1] = "user_register"
 print(f"修改register以后:{test_cases}")
 test_cases.append("profile")
 print(f"末尾添加profile以后{test_cases}")
-test_cases.insert(0, "heal_check")
+test_cases.insert(0, "health_check")
 print(f"在开头插入heal_check以后:{test_cases}")
-test_cases.append(["update_user", "delete_user"])
+test_cases.extend(["update_user", "delete_user"])
 print(f"批量添加以后:{test_cases}")
 test_cases.remove("logout")
 print(f"删除logout以后:{test_cases}")
@@ -93,13 +93,13 @@ cases_a = ["login"]
 cases_b = ["login"]
 new_cases = ["register", "logout"]
 cases_a.append(new_cases)
-print(f"case_a:{cases_a}")
+print(f"case_a:{cases_a},长度为{len(cases_a)},最后一个元素类型为:{type(cases_a[-1])}")
 cases_b.extend(new_cases)
-print(f"case_b:{cases_b}")
+print(f"case_b:{cases_b},长度为{len(cases_b)},最后一个元素类型为:{type(cases_b[-1])}")
 # append()添加了一个元素
 # 因为case_a只添加了一个元素，所以长度为2（添加的元素是一个列表，只占一个地址）
 # 因为case_b是将new_cases里的元素分别加入case_b后面，加了两个元素，所以长度为3
-# 是只能传入列表，如果传入字符串的话，会把字符串当成一个列表，把每个字符拆开分别插入
+# extend传入可迭代对象，例如如果传入字符串的话，会把字符串当成一个列表，把每个字符拆开分别插入
 
 print("————————————————————————练习四：查询和统计——————————————————————————")
 # 定义：
@@ -121,6 +121,7 @@ print(f"500第一次出现的位置为:{status_codes.index(500)}")
 print(f"401第一次出现的位置为:{status_codes.index(401)}")
 print(f"201 是否存在:{201 in status_codes}")
 print(f"403 是否不存在:{403 not in status_codes}")
+print(f"列表长度为:{len(status_codes)}")
 
 print("————————————————————————练习五：排序与反转——————————————————————————")
 # 定义：
@@ -171,8 +172,8 @@ print("————————————————————————�
 #
 # 不能修改原列表。
 response_times = [320.5, 85.2, 170.8, 95.6, 410.3]
-print(f"用例数量:{len(response_times)} | 最快响应时间:{max(response_times)}ms | "
-      f"最慢响应时间:{min(response_times)}ms | 响应时间总和:{sum(response_times):.2f}ms |"
+print(f"用例数量:{len(response_times)} | 最快响应时间:{min(response_times):.2f}ms | "
+      f"最慢响应时间:{max(response_times):.2f}ms | 响应时间总和:{sum(response_times):.2f}ms |"
       f" 平均响应时间{sum(response_times)/len(response_times):.2f}ms")
 
 print("响应时间升序结果为:",sorted(response_times))
