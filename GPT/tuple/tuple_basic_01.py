@@ -1,5 +1,3 @@
-from variable.loop import count
-
 list_A = [100, "hello", "world"]  # 这是一个列表
 list_A[0] = 200  # 可以对列表中的任意元素进行重新赋值
 print(f"修改后的列表为:{list_A}")
