@@ -16,9 +16,10 @@ token_pass = has_token
 error_message_pass = error_message is None
 response_time_pass = response_time <= 1000
 environment_pass = environment in ["test", "staging"]
-environment_NoProduction = environment != "production"
+environment_not_production = environment != "production"
 
-api_pass = status_code_pass and token_pass and error_message_pass and response_time_pass and environment_NoProduction
+api_pass = (status_code_pass and token_pass and error_message_pass and
+            environment_pass and response_time_pass and environment_not_production)
 # 然后组合为最终变量：
 #
 # api_pass = ...
@@ -45,8 +46,8 @@ api_pass = status_code_pass and token_pass and error_message_pass and response_t
 
 print(f"状态码正确:{status_code_pass}")
 print(f"Token存在:{token_pass}")
-print(f"没有错误:{environment_pass}")
+print(f"没有错误:{error_message_pass}")
 print(f"响应时间合格:{response_time_pass}")
 print(f"环境允许:{environment_pass}")
-print(f"不是生产环境:{environment_NoProduction}")
+print(f"不是生产环境:{environment_not_production}")
 print(f"接口整体通过:{api_pass}")

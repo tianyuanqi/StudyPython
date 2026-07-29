@@ -1,5 +1,3 @@
-from typing import List
-
 ### 什么是元组
 元组和列表类似，最大的区别是元组的内容是不可变的<br>
 

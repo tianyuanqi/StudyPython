@@ -1,3 +1,5 @@
+from variable.loop import count
+
 list_A = [100, "hello", "world"]  # 这是一个列表
 list_A[0] = 200  # 可以对列表中的任意元素进行重新赋值
 print(f"修改后的列表为:{list_A}")
@@ -51,13 +53,13 @@ print(f"打印类型:{type(test_cases)}")
 print(f"打印长度:{len(test_cases)}")
 print(f"打印第一个元素:{test_cases[0]}")
 print(f"打印最后一个元素:{test_cases[-1]}")
-print(f"打印中间三个元素:{test_cases[1:3]}")
+print(f"打印中间三个元素:{test_cases[1:4]}")
 print(f"打印最后两个元素:{test_cases[-2:]}")
 print(f"打印倒序后的新元组:{test_cases[::-1]}")
 print(f"打印 test_cases[1] 的类型:{type(test_cases[1])}")
 print(f"打印 test_cases[1:2] 的类型:{type(test_cases[1:2])}")
 print(f"判断 'pay_order' 是否存在:{'pay_order' in test_cases}")
-print(f"判断 'delete_order' 是否存在:{'delete_order' in test_cases}")
+print(f"判断 'delete_order' 是否不存在:{'delete_order' not  in test_cases}")
 
 print("————————————————————————练习二：单元素元组和查询————————————————————————")
 data_a = ("login")
@@ -124,8 +126,9 @@ print("修改后的list:", list_cases)
 
 # 判断两个对象中是否都包含 "login"。
 # 分别统计 "login" 出现的次数。
-print(f"list_cases是否包含login:{'login' in list_cases}")
-print(f"tuple_cases是否包含login:{'login' in tuple_cases}")
+print(f"list_cases是否包含login:{'login' in list_cases},login出现的次数为:{list_cases.count('login')}")
+print(f"tuple_cases是否包含login:{'login' in tuple_cases},login出现的次数为:{tuple_cases.count('login')}")
+
 
 
 
@@ -148,6 +151,8 @@ print(f"tuple_cases是否包含login:{'login' in tuple_cases}")
 # count只返回出现的次数，并不会修改元组
 
 # 7. index() 返回什么？
+# 返回元素第一次出现时的索引位置，找不到时会抛出ValueError
+
 # 8. 元组和列表当前最重要的区别是什么？
 # 元组是不可修改的，列表可以修改
 
