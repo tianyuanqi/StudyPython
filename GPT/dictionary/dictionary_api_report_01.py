@@ -21,13 +21,13 @@ status_code = api_result.get("status_code")
 response_time = api_result.get("response_time")
 token = api_result.get("token")
 error = api_result.get("error")
-enviroment = api_result.get("environment", "test")
+environment = api_result.get("environment", "test")
 
 print("——————————————第二部分：计算判断结果————————————————————")
 
 status_pass = status_code == 200
 response_time_pass = response_time <= 500
-token_pass = token != None
+token_pass = token is not None
 error_pass = error is None
 method_pass = method == "POST"
 path_pass = path.startswith("/api")
@@ -44,10 +44,11 @@ api_result.update({
     "case_name": "user_login_success"
 })
 
+
 #     使用 pop("token") 删除 Token，并保存返回值。
 pop_token = api_result.pop("token")
 #     打印删除 Token 后 "token" in api_result 的结果。
-print(token in api_result)
+print("token" in api_result)
 
 #     使用 get("token", "Token已删除") 再次读取 Token。
 print(api_result.get("token", "token已删除"))
@@ -55,14 +56,14 @@ print(api_result.get("token", "token已删除"))
 print("————————————————————第四部分：输出报告——————————————————————")
 
 print("================ 接口测试报告 ================")
-print(f"CASE_{case_number:03d} | {case_name}")
+print(f"CASE_{case_number:03d} | {api_result['case_name']}")
 print(f"请求方式:{method}")
 print(f"接口路径:{path}")
-print(f"运行环境:{enviroment}")
+print(f"运行环境:{environment}")
 print(f"状态码:{status_code}")
-print(f"响应时间:{response_time}")
+print(f"响应时间:{response_time:.2f}ms")
 print(f"状态码合格:{status_pass}")
-print(f"响应时间合格:{response_time_pass} ms")
+print(f"响应时间合格:{response_time_pass} ")
 print(f"token合格:{token_pass}")
 print(f"无错误信息:{error_pass}")
 print(f"请求方式合格:{method_pass}")

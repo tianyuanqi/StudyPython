@@ -2,7 +2,21 @@
 ## 字典是什么。
 字典是可变数据类型，用于存放键值对
 与之间的列表和元组不同，字典通过"key"来访问"value"，而不是通过索引
+* 字典的value可以是不同类型的
+* 在同一个字典中，key必须唯一
 
+## 创建字典
+```python
+# 创建字典并直接赋值
+data_a = { 
+    "status_code": 200,
+    "message": "success"
+}
+
+data_b = {} #创建一个空字典
+
+data_c = dict() #也是创建一个空字典
+```
 
 ## 键和值的含义。
 键就是key，值value是实际的数据，key和value一一对应，通过key来获取对应的值<br>
@@ -11,28 +25,28 @@
 ### 方括号和 get() 的区别。
 在有实际key的情况下，通过方括号或者get()都可以获取value
 但如果不存在对应的key，使用方括号就会报错。<br>
-get方法的优势是，如果通过下标索引获取某个值，但这个值实际并不存在时，会报错
+get方法的优势是，如果通过索引获取某个值，但这个值实际并不存在时，会报错
 但通过get方法获取且该值不存在时，get方法会返回None
 
 不要在 Markdown 文件顶部添加无关的 Python 导入语句。
 
 ### 获取对应的值
 有两种方式可以获取字典的值
-通过下标索引获取
+通过key来获取
 ```python
 response_data = {
     "status_code": 200,
     "message": "login success"
 }
 
-print(response_data[1]) #通过下标索引直接访问
+print(response_data["status_code"]) #通过键进行访问
 
-print(response_data[3]) #如果该值不存在，就会报错
+print(response_data["login"]) #如果该键不存在，就会报错
 
 ```
 
 通过get()方法获取
-get方法的优势是，如果通过下标索引获取某个值，但这个值实际并不存在时，会报错
+get方法的优势是，如果通过索引获取某个值，但这个值实际并不存在时，会报错
 但通过get方法获取且该值不存在时，get方法会返回None
 
 ## 获取所有的键和值

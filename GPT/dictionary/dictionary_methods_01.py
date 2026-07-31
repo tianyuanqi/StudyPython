@@ -17,7 +17,7 @@ case_data = {
 }
 # 将 "case_name" 修改为 "user_login"。
 case_data["case_name"] = "user_login"
-print(f"case_name修改以后:{case_data['case_name']}")
+print(f"case_name修改以后:{case_data}")
 
 # 添加 "environment": "test"。
 case_data["environment"] = "test"

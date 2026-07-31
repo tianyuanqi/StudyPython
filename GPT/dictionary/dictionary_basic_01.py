@@ -1,7 +1,3 @@
-from pickle import NONE
-
-from GPT.week01.day02.basic_operators_01 import product_name
-
 print("——————————————————练习一：创建和读取字典————————————————————")
 # 完成：
 # 打印完整字典。
