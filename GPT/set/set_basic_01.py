@@ -44,6 +44,7 @@ print(f"status_codes中是否不存在403:{403 not in status_codes}")
 
 # 创建空集合并打印其类型。
 empty_set = set()
+print("empty_set的类型为:", type(empty_set))
 
 # 创建：empty_data = {} 打印它的类型，并说明它为什么不是集合。
 empty_data = {}
@@ -67,9 +68,12 @@ print(f"转换前的长度:{len(case_list)},转换后的长度:{len(set_list)}")
 # 创建变量判断原列表是否有重复数据。
 has_duplicate_data = len(set_list) != len(case_list)
 
-# 确认原列表没有被修改。
-print("原列表有没有被修改:",case_list!=[ "login",
+original_case_list = [
+    "login",
     "register",
     "login",
     "logout",
-    "register"])
+    "register"
+]
+# 确认原列表没有被修改。
+print("原列表保持不变:", case_list == original_case_list)

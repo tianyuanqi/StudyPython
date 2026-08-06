@@ -46,7 +46,13 @@ returned_app_ids = [
     105
 ]
 # 应用总数量。
+print(f"应用总量为:{len(returned_app_ids)}")
 # 去重后的应用集合。
+print(f"去重后的应用集合:{set(returned_app_ids)}")
 # 去重后的数量。
+print(f"去重后的数量为:{len(set(returned_app_ids))}")
 # 是否存在重复应用。
+print(f"是否存在重复应用:{len(returned_app_ids) != len(set(returned_app_ids))}")
+
 # 重复前后数量相差多少。
+print(f"重复前后数量相差多少:{len(returned_app_ids) - len(set(returned_app_ids))}")

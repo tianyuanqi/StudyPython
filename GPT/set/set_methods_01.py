@@ -12,7 +12,7 @@ print("添加profile以后的test_cases:", test_cases)
 
 # 再次添加 "login"，观察长度是否变化。
 print(f"添加login之前的长度为:{len(test_cases)}")
-test_cases.add("profile")
+test_cases.add("login")
 print(f"添加login之后的长度为:{len(test_cases)}")
 print(f"添加login之后的test_cases:{test_cases}")
 
@@ -59,8 +59,9 @@ print(f"最终集合的长度为{len(test_cases)}")
 #A 因为集合具有去重的特性，发现重复的元素，并不会被加入集合
 
 #Q 集合 pop() 与列表、字典 pop() 的区别。
-#A 列表、字典的pop()是默认删除最后一个元素，返回被删除的内容
-#A 集合pop()是随机删除一个元素，返回被删除的内容
+#A 列表的pop()是默认删除最后一个元素，返回被删除的内容
+#A 字典的pop()是根据key去删除，返回被删除的value值
+#A 集合pop()是删除某个元素，返回被删除的内容。无法通过索引指定删除指定的对象
 
 #Q 集合为什么不能使用索引。
 #A 集合是无序的数据结构，没有位置概念，无法使用索引
