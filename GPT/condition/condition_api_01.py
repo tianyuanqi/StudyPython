@@ -44,7 +44,6 @@ if status_code == 200:
 
     else:
         print("业务处理失败")
-print("业务处理失败")
 
 # <= 300       → 响应速度优秀
 # <= 500       → 响应速度正常
@@ -99,7 +98,7 @@ else:
 # 不使用函数。
 api_pass = (status_code==200 and busiss_code==0 and
             response_time <= 1000 and token is not None
-            and data is not None and error is None)
+            and data and error is None)
 
 if api_pass:
     print("接口测试结果:PASS")

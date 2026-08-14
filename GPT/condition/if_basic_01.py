@@ -26,7 +26,7 @@ else:
 # 判断错误信息：
 # error_message is None：没有错误信息
 # 否则：存在错误信息
-if error_message != None:
+if error_message is None:
     print("没有错误信息")
 else:
     print("存在错误信息")
