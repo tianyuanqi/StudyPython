@@ -27,7 +27,7 @@ for i in range(2,5):
 # 4
 ```
 
-### range(start,end,step) 两个参数代表起始位置和终止位置还有步长（不包含终止位置）
+### range(start,end,step) 三个参数代表起始位置和终止位置还有步长（不包含终止位置）
 ```python
 for i in range(2,10,3):
     print(i)
@@ -40,6 +40,7 @@ for i in range(2,10,3):
 
 ## 使用enumerate()遍历列表
 当你遍历一个序列，同时又需要“下标 + 元素”时,更推荐使用enumerate()
+通过该方法遍历的时候会直接获取索引，且可读性更好
 ```python
 test_cases = [
     "login",
@@ -47,6 +48,7 @@ test_cases = [
     "logout"
 ]
 
-for index,app in enumerate(test_cases):
+for index,app in enumerate(test_cases,start=1): #start表示=1表示从1开始计数
+
     print(f"第{index}个测试:{app}")
 ```

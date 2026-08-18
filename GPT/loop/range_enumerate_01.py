@@ -18,5 +18,5 @@ print("————————————————————————�
 # 第2个测试:
 # 第3个测试:
 
-for index,app in enumerate(test_cases):
+for index,app in enumerate(test_cases,start=1):
     print(f"第{index}个测试:{app}")

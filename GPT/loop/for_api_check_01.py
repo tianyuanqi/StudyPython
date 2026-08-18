@@ -35,7 +35,7 @@ print(f"广告数量为:{ad_count}")
 # 输出：应用名称缺失
 
 for index, app in enumerate(apps):
-    if app["name"] == "":
+    if "name" not in app or app["name"] == "":
         print(f"第{index+1}个应用名称缺失")
 
 for app in apps:
