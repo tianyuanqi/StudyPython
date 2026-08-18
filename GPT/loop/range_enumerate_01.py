@@ -20,3 +20,6 @@ print("————————————————————————�
 
 for index,app in enumerate(test_cases,start=1):
     print(f"第{index}个测试:{app}")
+
+# enumerate() 可以在遍历元素的同时直接获取索引，
+# 不需要通过 range(len()) 再用索引取值，代码更简洁、可读性更好。
