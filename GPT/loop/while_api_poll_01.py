@@ -4,7 +4,7 @@ task_statuses = [
     "processing",
     "processing",
     "processing",
-    "success"
+    "successsuccess"
 ]
 max_retry = 5
 retry_count = 0
@@ -18,12 +18,13 @@ index = 0
 # 第4次查询，任务状态：success
 # 如果status == "success"，打印任务执行成功
 
-while index <= max_retry:
+while index <= max_retry and retry_count < len(task_statuses):
     print(f"第{index + 1}次查询，任务状态{task_statuses[index]}")
     if task_statuses[index] == "success":
         print("任务执行成功")
         break
     index += 1
+    retry_count += 1
 
 print("————————————————————分割线————————————————————")
 failed_statuses = [
@@ -51,11 +52,10 @@ while True:
         print("超过最大轮训次数，任务未完成")
         break
 
-if task_success == True:
+if task_success:
     print("测试成功")
 else:
     print("测试失败")
-
 
 # Q1:
 # 为什么接口轮询不能简单写成：

@@ -1,4 +1,4 @@
-count = 0
+count = 1
 
 # 要求1:遇到3，6时使用continue
 
@@ -14,11 +14,11 @@ print("——————————————————分割线———�
 attempt = 1
 
 while attempt <= 5:
+    print(f"第{attempt}次尝试")
     if attempt == 3:
         print("操作成功")
         break
     else:
-        print(f"第{attempt}次尝试")
         attempt += 1
 
 # Q: break 和 continue 的区别是什么？
