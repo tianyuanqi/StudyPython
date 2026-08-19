@@ -18,7 +18,7 @@ index = 0
 # 第4次查询，任务状态：success
 # 如果status == "success"，打印任务执行成功
 
-while index <= len(task_statuses) and retry_count < max_retry:
+while index < len(task_statuses) and retry_count < max_retry:
     print(f"第{index + 1}次查询，任务状态{task_statuses[index]}")
     if task_statuses[index] == "success":
         print("任务执行成功")
