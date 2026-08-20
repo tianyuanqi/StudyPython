@@ -9,7 +9,7 @@ def login(username, password):
     if username == "test_user" and password == "123456":
         return "login_success"
     else:
-        return "login_fail"
+        return "login_failed"
 
 
 test_cases = [{"username": "test_user", "password": "123456"},
@@ -28,9 +28,9 @@ test_cases = [{"username": "test_user", "password": "123456"},
 for index, i in enumerate(test_cases, start=1):
     result = login(i.get("username"), i.get("password"))
     if result == "login_success":
-        print(f"第{index}次执行成功")
+        print(f"第{index}次登录成功")
     else:
-        print(f"第{index}次执行失败")
+        print(f"第{index}次登录失败")
 
 print("————————————————————分割线————————————————————")
 

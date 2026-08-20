@@ -23,7 +23,8 @@ def check_response_time(response_time):
 
 
 def check_token(token):
-    if token != None and token != "":
+    # if token != None and token != "":
+    if token:
         return True
     else:
         return False
