@@ -11,7 +11,7 @@ print("—————————————————分割线，定义一�
 def add(a, b):
     return a + b
 result = add(10, 20)
-print(f"计算结果{result}")
+print(f"计算结果:{result}")
 
 print("—————————————————分割线，定义检查状态码的函数———————————————————")
 # 规则：status_code == 200 → 返回 True，其他 → 返回 False
