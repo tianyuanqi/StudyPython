@@ -23,7 +23,7 @@ print(time_out1)
 print(time_out2)
 
 # Q1: **kwargs 接收到的数据是什么类型？
-# A: 元组
+# A: 字典
 
 # Q2: *args 和 **kwargs 最大区别是什么？
 # A: args接受不确定数量的位置参数，返回一个元组
