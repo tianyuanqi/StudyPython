@@ -68,7 +68,7 @@ send_request("post","/login",10) #这里函数执行的时候，timeout为10
 
 
 
-## 函数的作用域：
+## 变量的作用域：
 * 在函数内部定义的变量，作用域只是在函数内部，叫做局部变量
 * 在函数外面定义的变量，作用域是整个.py文件，叫做全局变量
 
@@ -84,3 +84,14 @@ def login():
 login()  # 输出123456
 print(login())  # 输出"abc123"
 ```
+
+
+## 可变参数
+
+* 如果不知道这个函数该传入几个参数，可以定义一个可变参数 *args
+```python
+def show_number(*args):
+    print(args)
+    return 
+```
+**kwargs的用法和*args差不多，区别是**kwargs用的是关键字参数
