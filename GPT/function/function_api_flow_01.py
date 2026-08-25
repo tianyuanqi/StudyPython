@@ -24,9 +24,9 @@ def get_user_info(token, timeout=5):
         return None
 
 
-token = login("test_user", "123456")
-
-user_info = get_user_info(token, 10)
+# 使用关键字参数去调用
+token = login(username="test_user", password="123456")
+user_info = get_user_info(token=token, timeout=10)
 
 if token and user_info:
     print("接口流程执行成功")
@@ -34,7 +34,7 @@ else:
     print("接口流程执行失败")
 
 print("————————————————————分割线，失败场景————————————————————")
-faild_token = login("test_user", "wrong_password")
+faild_token = login(username="test_user", password="wrong_password")
 
 faild_user_info = get_user_info(token=faild_token, timeout=10)
 if faild_token and faild_user_info:
