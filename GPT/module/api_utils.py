@@ -13,10 +13,7 @@ def check_business(business_code):
 
 
 def get_timeout(**kwargs):
-    if kwargs:
-        return kwargs
-    else:
-        return 5
+    return kwargs.get("timeout",5)
 
 
 if __name__ == "__main__":
