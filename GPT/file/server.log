@@ -1,0 +1,5 @@
+INFO login success
+INFO get user success
+ERROR token expired
+INFO logout success
+ERROR database timeout
