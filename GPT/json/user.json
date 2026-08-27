@@ -1,0 +1,6 @@
+{
+    "username": "test_user",
+    "password": "123456",
+    "role": "tester",
+    "enabled": true
+}
