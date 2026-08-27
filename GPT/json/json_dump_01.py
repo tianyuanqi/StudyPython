@@ -10,9 +10,9 @@ with open("result.json", "w", encoding="utf-8") as file:
     json.dump(test_result, file, ensure_ascii=False, indent=4)
 
 with open("result.json", "r", encoding="utf-8") as file:
-    result = file.read()
+    result = json.load(file)
     print(result)
-
+    print(result["case_name"])
 
 # Q1:
 # json.dump() 的作用是什么？

@@ -8,12 +8,13 @@ def login(username, password):
     return "failed"
 
 
-with open("login_cases.json.py", "r", encoding="utf-8") as file:
+with open("login_cases.json", "r", encoding="utf-8") as file:
     test_cases = json.load(file)
     print(test_cases)
+    print(type(test_cases))
 
     for index, test_case in enumerate(test_cases, start=1):
-        actual = login(test_case["username"], test_case["password"])
+        actual = login(username=test_case["username"], password=test_case["password"])
         if actual == test_case["expected"]:
             print(f"第{index}条:PASS")
         else:
