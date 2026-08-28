@@ -4,11 +4,9 @@ def calculate(value):
         result = 100 / number
     except ValueError:
         print("数字格式错误请输入数字")
-        result="处理结束"
 
     except ZeroDivisionError:
         print("除数不能为0")
-        result="处理结束"
     else:
         print(f"计算成功，结果为:{result}")
     finally:
