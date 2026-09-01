@@ -28,5 +28,5 @@ print(user2.role)
 #
 # 左边的 self.username 和右边的 username
 # 分别是什么？
-# A: 右边的username代表传入的实参，左边的self.username代表实例本身的属性，
-# self.username=username是根据传入的参数给该实例赋值
+# A: 右边的username代表传入的形参，左边的self.username代表实例本身的属性，
+# self.username=username是根据传入的参数保存到当前的实例中

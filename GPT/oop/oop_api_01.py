@@ -23,14 +23,11 @@ class ApiResponse:
             return False
 
     def check_token(self):
-        if self.token is not None:
-            return True
-        else:
-            return False
+        return bool(self.token)
 
 
 def check_api(response):
-    if response.check_status() and response.check_business and response.check_token:
+    if response.check_status() and response.check_business() and response.check_token():
         return True
     else:
         return False

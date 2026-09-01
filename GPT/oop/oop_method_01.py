@@ -33,7 +33,7 @@ check_login(failed_user)
 
 # Q1:
 # 类中定义的函数通常叫什么？
-# A: 类函数或者方法
+# A: 方法
 
 # Q2:
 # 为什么调用：
@@ -41,4 +41,4 @@ check_login(failed_user)
 # success_user.login()
 #
 # 时不需要手动给 self 传值？
-# A: 因为在调用login方法时，对象里面已经保存了username和password，不需要再重复传值
+# A: 通过对象调用实例方法时，Python 会自动把这个对象本身作为第一个参数传给 self,所以调用时不用手动传self
