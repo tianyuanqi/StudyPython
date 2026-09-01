@@ -12,9 +12,9 @@ def calculate(value):
     finally:
         print("处理结束")
 
-print(calculate("20"))
-print(calculate("abc"))
-print(calculate("0"))
+calculate("20")
+calculate("abc")
+calculate("0")
 
 # Q1:
 # else 在什么情况下执行？
