@@ -10,7 +10,7 @@ def calculate(value):
     else:
         print(f"计算成功，结果为:{result}")
     finally:
-        return "处理结束"
+        print("处理结束")
 
 print(calculate("20"))
 print(calculate("abc"))
