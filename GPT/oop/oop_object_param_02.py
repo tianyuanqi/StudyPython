@@ -4,8 +4,10 @@ class User:
         self.username = username
         self.status = status
 
-    def disable_user(user):
-        user.status = "disabled"
+
+def disable_user(user):
+    user.status = "disabled"
+
 
 user = User(
     username="test_user",
@@ -13,7 +15,7 @@ user = User(
 )
 
 print(user.status)
-user.disable_user()
+disable_user(user)
 print(user.status)
 
 # Q1:
@@ -27,7 +29,7 @@ print(user.status)
 # user.status = "disabled"
 #
 # 会影响函数外面的原对象？
-# A: 因为对象保存了属性，这个属性是可以修改的，通过调用函数修改了属性之后，保存的是修改后的值
+# A: 因为函数里面的形参user，和函数外的user是同一个对象，函数没有重新创建对象，所以修改的是原本对象的属性
 
 # Q3:
 # 如果函数中只是：

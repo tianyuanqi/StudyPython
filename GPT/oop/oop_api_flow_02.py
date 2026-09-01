@@ -57,16 +57,16 @@ else:
 
 # Q2:
 # login() 返回的是什么类型？
-# A:返回的ApiResponse类型参数
+# A:返回的ApiResponse类型对象
 
 # Q3:
 # success_request 和 success_response
 # 是不是同一个对象？
-# A:不是同一个对象，success返回的是LoginRequest类型参数，success_response返回的是ApiResponse类型参数
+# A:success_request是LoginRequest类型对象，success_response是ApiResponse类型对象，他们不是同一个对象
 
 # Q4:
 # 本题的数据流可以怎样描述？
 # A: 创建一个LoginRequest类型的对象，传入username和password两个参数，
-# 然后把这个对象当做参数去调用login方法，返回一个ApiResponse类型的对象，这个对象记录的是返回值的相关信息，
-# 最后把记录返回值的对象作为参数传入check_response方法去检查返回值是否符合要求
+# 然后把这个对象当做参数去调用login函数，返回一个ApiResponse类型的对象，这个对象记录的是返回值的相关信息，
+# 最后把记录返回值的对象作为参数传入check_response函数去检查返回值是否符合要求
 
