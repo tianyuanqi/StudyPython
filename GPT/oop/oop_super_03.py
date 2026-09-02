@@ -26,5 +26,7 @@ print(admin.level)
 # Q3:
 # AdminUser 最终为什么同时拥有
 # username 和 level 两个属性？
-# A: 因为父类就有一个username属性，所以子类也会有，并且level是子类额外定义的一个属性，
-# 所以AdminUser有username和level两个属性
+# A: super().__init__(username) 调用了User.__init__,
+# 给当前的AdminUser对象设置了username属性，
+# 然后AdminUser.__init__又设置了level属性
+# 所以同一个admin对象同时拥有username和level

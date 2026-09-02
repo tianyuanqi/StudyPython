@@ -43,7 +43,11 @@ print(user_result)
 # Q1:
 # LoginApi 和 UserApi 为什么都可以使用
 # self.base_url 和 self.timeout？
-# A: 因为它们都是BaseApi的子类，子类默认具有父类的属性
+# A: 因为LoginApi和UserApi都继承自BaseApi，而且没有定义自己的__init__
+# 所以创建子类对象时，会使用父类的BaseApi.__init__(),
+# 所以对象中会初始化self.base_url和self.timeout
+
+
 
 # Q2:
 # build_url() 为什么只需要在 BaseApi 中写一次？
