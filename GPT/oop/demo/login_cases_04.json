@@ -1,0 +1,23 @@
+[
+  {
+    "case_name": "login_success",
+    "username": "test_user",
+    "password": "123456",
+    "expected_status_code": 200,
+    "expected_business_code": 0
+  },
+  {
+    "case_name": "wrong_password",
+    "username": "test_user",
+    "password": "wrong_password",
+    "expected_status_code": 200,
+    "expected_business_code": 1001
+  },
+  {
+    "case_name": "wrong_username",
+    "username": "wrong_user",
+    "password": "123456",
+    "expected_status_code": 200,
+    "expected_business_code": 1001
+  }
+]
