@@ -6,6 +6,7 @@ class LoginApi(BaseApi):
     def login(self, username, password):
         url = self.build_url("/login")
         print(f"请求地址:{url}")
+        print(f"超时时间:{self.timeout}")
         if username == "test_user" and password == "123456":
             return ApiResponse(
                 status_code=200,

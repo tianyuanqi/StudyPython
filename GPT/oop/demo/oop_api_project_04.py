@@ -3,7 +3,7 @@ from GPT.oop.demo.login_api_04 import LoginApi
 
 
 def run_testcases():
-    login_api = LoginApi("www.test.com", timeout=5)
+    login_api = LoginApi(base_url="http://api.test.com", timeout=10)
 
     testcases = load_json("login_cases_04.json")
 
@@ -12,11 +12,12 @@ def run_testcases():
             username=testcase["username"],
             password=testcase["password"]
         )
+        print(f"接口业务是否成功:{response.is_success()}")
         if (response.status_code == testcase["expected_status_code"]
                 and response.business_code == testcase["expected_business_code"]):
-            print(f"用户名:{testcase['case_name']}:PASS")
+            print(f"测试用例执行结果:用户名:{testcase['case_name']}:PASS")
         else:
-            print(f"用户名:{testcase['case_name']}:FAIL")
+            print(f"测试用例执行结果:用户名:{testcase['case_name']}:FAIL")
 
 
 run_testcases()
