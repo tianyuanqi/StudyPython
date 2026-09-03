@@ -41,7 +41,7 @@ run_testcases()
 # Q4:
 # data_loader_04.py 为什么没有必要
 # 一定写成一个 class？
-# A: 因为打开文件的操作基本都是一样的，没必要单独写成一个class
+# A: 因为load_json只是一个读取json文件的函数，没有需要长期保存到对象中的状态，所以用普通的函数即可，没必要定义成class
 
 
 # Q5:
@@ -53,4 +53,9 @@ run_testcases()
 # Q6:
 # 本项目完整的数据流是什么？
 # 从 JSON 开始描述到 PASS / FAIL。
-# A:
+# A: 通过load_json方法读取文件，将测试数据保存到列表中，
+# 然后通过循环遍历读取每条测试数据，
+# 将username和password传入login()方法，然后拿到返回值（返回值是ApiResponse类的对象），
+# 然后用返回值去调用is_success方法判断接口业务是否成功。
+# 再接着取出返回值的status_code和business_code，去和测试数据中定义的预期值进行对比，
+# 如果和预期值相同，则说明测试用例通过
