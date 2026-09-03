@@ -1,5 +1,5 @@
-from GPT.oop.demo.data_loader_04 import load_json
-from GPT.oop.demo.login_api_04 import LoginApi
+from data_loader_04 import load_json
+from login_api_04 import LoginApi
 
 
 def run_testcases():
@@ -20,7 +20,8 @@ def run_testcases():
             print(f"测试用例执行结果:用户名:{testcase['case_name']}:FAIL")
 
 
-run_testcases()
+if __name__ == "__main__":
+    run_testcases()
 
 # Q1:
 # LoginApi 为什么可以调用 build_url()？

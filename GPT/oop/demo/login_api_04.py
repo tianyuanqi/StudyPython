@@ -1,4 +1,4 @@
-from GPT.oop.demo.api_response_04 import ApiResponse
+from api_response_04 import ApiResponse
 from base_api_04 import BaseApi
 
 
