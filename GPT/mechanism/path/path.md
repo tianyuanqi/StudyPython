@@ -40,8 +40,16 @@ python tools/login.py
 当前的工作路径仍然是项目根目录，文件就可以正常找到
 
 
-可以通过以下方式获取当前工作目录
+可以通过以下方式获取当前文件的父目录
 ```python
 from pathlib import Path
 Path(__file__).parent
+```
+## 常用的几个方法
+```python
+from pathlib import Path
+
+Path.cwd()  # 当前工作目录
+Path(__file__).parent  # 当前文件的父目录
+Path(__file__).resolve().parent  # 当前文件所在目录的绝对路径
 ```

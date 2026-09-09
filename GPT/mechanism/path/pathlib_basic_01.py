@@ -18,7 +18,7 @@ print(f"判断是不是文件:{file_path.is_file()}")
 
 # Q2:
 # exists() 返回什么？
-# A:False
+# A: 用于判断路径是否存在，如果存在返回True，不存在返回False
 
 
 # Q3:
