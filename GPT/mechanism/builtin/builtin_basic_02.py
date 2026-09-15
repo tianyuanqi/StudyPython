@@ -25,10 +25,8 @@ roles = [
 # user01:admin
 # user02:tester
 # user03:user
-
-users = zip(usernames, roles)
-for i in users:
-    print(i)
+for username,role in zip(usernames,roles):
+    print(f"{username}:{role}")
 
 cases = [
     {
@@ -71,8 +69,9 @@ for index, i in enumerate(new_cases, start=1):
 # Q2:
 # zip() 的主要作用是什么？
 # 如果两个列表长度不同会怎样？
-# A: zip() 的主要作用是将两个不同的列表进行拼接，形成一个新的列表。如果两个列表的长度不一样，
-# 会以较短的那个为基准，拼接到和它一样的长度
+# A: zip() 用来把多个可迭代对象中相同位置的数据配对。
+# 如果长度不同，以最短的那个为准，多出的元素不会参与配对。
+# zip() 本身返回zip对象，不是直接返回列表。
 
 
 # Q3:
@@ -83,4 +82,5 @@ for index, i in enumerate(new_cases, start=1):
 # Q4:
 # lambda case: case["priority"]
 # 在这里的作用是什么？
-# A: 作用是返回字典中"priority"对应的那个value
+# A: # lambda接收一条case，并返回case["priority"]，
+# # sorted()就使用这个priority值作为每条case的排序依据。

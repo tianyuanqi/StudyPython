@@ -73,12 +73,14 @@ print(any(check_results))
 
 # Q1:
 # 为什么 disabled_case 没有进入后面的执行流程？
-# A: 因为disabled_case代表测试用例的状态，启用或者未启用，通过该状态去判断需要执行的用例，该字段本身不应该被加入执行流程
-
+# A：因为生成enabled_cases时只保留enabled == True的用例，
+# disabled_case的enabled是False，
+# 所以它在过滤阶段就没有进入enabled_cases，
+# 后续排序和执行自然也不会包含它。
 
 # Q2:
 # all(check_results) 为什么是 False？
-# A: 因为check_results中只要有一个False，call(check_results)就会返回False
+# A: 因为check_results中只要有一个False，all(check_results)就会返回False
 
 
 # Q3:
@@ -89,4 +91,8 @@ print(any(check_results))
 # Q4:
 # 本题的数据处理流程是什么？
 # 从原始testcases开始描述。
-# A:
+# A: 从原始的testcases通过列表推导式过滤"enabled"=True得到需要用于执行的用例enable_testcases
+# 再根据sorted()方法按priority进行排序，然后使用enumerate() 按顺序逐条执行
+# 再比较每条用例中的"status_code"是否和"expected_status_code"保持一致，来判断用例是否通过，
+# 得到每条用例的执行结果True和False，保存到check_results，
+# 再使用all()判断是否全部通过，用any判断是否至少有一条通过
